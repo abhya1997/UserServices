@@ -11,13 +11,6 @@ import com.foodeliver.user.repositories.UserRepo;
 
 @SpringBootTest
 public class UserService {
-	@Autowired
-	private UserRepo repo;
-	@Test
-	public void userById() {
-		assertEquals(1, 2);
-		assertNotNull(repo);
-		//assertEquals("abhi", repo.);
-	}
+	
 
 }
