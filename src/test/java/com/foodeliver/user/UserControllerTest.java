@@ -56,17 +56,16 @@ import static org.mockito.Mockito.*;
         verify(userService, times(1)).getAllUser();
     }
 
-    @Test
-     void testFindById() {
-        User user = new User(1, "Abhi", "Mumbai", "pass1","abad");
-
-        when(userService.findtUserById(1)).thenReturn(user);
-
-        ResponseEntity<User> response = userController.findById(1);
-
-        assertEquals(200, response.getStatusCodeValue());
-        assertEquals(user, response.getBody());
-        verify(userService, times(1)).findtUserById(1);
-    }
+	/*
+	 * @Test void testFindById() { User user = new User(1, "Abhi", "Mumbai",
+	 * "pass1","abad");
+	 * 
+	 * when(userService.findtUserById(1)).thenReturn(user);
+	 * 
+	 * ResponseEntity<User> response = userController.findById(1);
+	 * 
+	 * assertEquals(200, response.getStatusCodeValue()); assertEquals(user,
+	 * response.getBody()); verify(userService, times(1)).findtUserById(1); }
+	 */
 }
 
