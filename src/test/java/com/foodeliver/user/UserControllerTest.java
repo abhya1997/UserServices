@@ -43,8 +43,8 @@ import static org.mockito.Mockito.*;
     @Test
      void testGetAllUsers() {
         List<User> users = Arrays.asList(
-                new User(1, "Abhi", "Mumbai", "pass1",""),
-                new User(2, "Ravi", "Pune", "pass2","")
+                new User(1, "Abhi", "Mumbai", "pass1","abad"),
+                new User(2, "Ravi", "Pune", "pass2","abad")
         );
 
         when(userService.getAllUser()).thenReturn(users);
@@ -58,11 +58,11 @@ import static org.mockito.Mockito.*;
 
     @Test
      void testFindById() {
-        User user = new User(1, "Abhi", "Mumbai", "pass1","");
+        User user = new User(1, "Abhi", "Mumbai", "pass1","abad");
 
         when(userService.findtUserById(1)).thenReturn(user);
 
-        ResponseEntity<User> response = userController.findById(2);
+        ResponseEntity<User> response = userController.findById(1);
 
         assertEquals(200, response.getStatusCodeValue());
         assertEquals(user, response.getBody());
